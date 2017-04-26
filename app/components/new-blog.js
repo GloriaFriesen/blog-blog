@@ -14,7 +14,18 @@ export default Ember.Component.extend({
         content: this.get('content'),
       };
       this.set('addNewBlog', false);
+      this.set('author', '');
+      this.set('date', '');
+      this.set('title', '');
+      this.set('content', '');
       this.sendAction('saveBlog', params);
+    },
+    cancel() {
+      this.set('addNewBlog', false);
+      this.set('author', '');
+      this.set('date', '');
+      this.set('title', '');
+      this.set('content', '');
     }
   }
 });

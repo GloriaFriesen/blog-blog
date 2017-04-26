@@ -19,6 +19,7 @@
       {{textarea value=content id="content"}}
     </div>
     <button {{action 'saveBlog'}}>SAVE THIS BLOG</button>
+    <button {{action 'cancel'}}>CANCEL</button>
   </form>
 {{else}}
   <button {{action 'showBlogForm'}}>BLOG THIS BLOG</button>
