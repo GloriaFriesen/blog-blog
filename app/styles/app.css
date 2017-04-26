@@ -14,10 +14,11 @@
   height: 100px;
 }
 
-#blog-link:hover {
+.blog-link:hover {
   text-decoration: none;
+  color: inherit;
 }
 
-#blog-link {
+.blog-link {
   color: inherit;
 }
