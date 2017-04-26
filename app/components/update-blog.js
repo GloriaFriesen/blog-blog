@@ -22,6 +22,11 @@ export default Ember.Component.extend({
       this.set('date', '');
       this.set('title', '');
       this.set('content', '');
+    },
+    delete(blog) {
+      if(confirm('You sure about it?')) {
+        this.sendAction('delete', blog);
+      }
     }
   }
 });

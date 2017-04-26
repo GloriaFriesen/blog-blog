@@ -22,3 +22,12 @@
 .blog-link {
   color: inherit;
 }
+
+#update-button {
+  float: right;
+}
+
+#delete-button {
+  float: right;
+  margin-left: 10px;
+}

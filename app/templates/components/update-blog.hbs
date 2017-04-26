@@ -1,3 +1,4 @@
+<button id="delete-button" {{action 'delete' blog}}>DELETE</button>
 {{#if updateBlog}}
 <form>
   <div class="form-group">
@@ -21,5 +22,5 @@
   <button {{action 'cancel'}}>CANCEL</button>
 </form>
 {{else}}
-<button {{action 'showUpdateForm'}}>Update</button>
+<button {{action 'showUpdateForm'}} id="update-button">UPDATE</button>
 {{/if}}
