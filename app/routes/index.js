@@ -5,5 +5,12 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       blogs: this.store.findAll('blog')
     });
+  },
+  actions: {
+    saveBlog(params) {
+      var newBlog = this.store.createRecord('blog', params);
+      newBlog.save();
+      this.transitionTo('index');
+    }
   }
 });
