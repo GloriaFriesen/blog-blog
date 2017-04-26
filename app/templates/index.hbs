@@ -1,6 +1,6 @@
 {{new-blog saveBlog="saveBlog"}}
 <br>
-{{#each model.blogs as |blog|}}
+{{#each model.blogs as |blog|}}{{#link-to 'blog' blog.id id="blog-link"}}
   <div class="panel panel-default">
     <div class="panel-heading">
       <h2>{{blog.title}}
@@ -9,5 +9,5 @@
     <div class="panel-body">
       <p>{{blog.content}}</p>
     </div>
-  </div>
+  </div>{{/link-to}}
 {{/each}}
