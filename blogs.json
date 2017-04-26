@@ -1,0 +1,12 @@
+{ "blogs": [{
+    "author": "Arthur",
+    "date": "04/26/2017",
+    "title": "I'm a blog",
+    "content": "This is a blog about my blog."
+  }, {
+    "author": "Archibold",
+    "date": "04/01/2017",
+    "title": "I'm the best blogger",
+    "content": "This blog is about my other blogs that are so great."
+  }]
+}
