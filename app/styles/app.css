@@ -2,3 +2,8 @@
   margin-right: 15px;
   float: left;
 }
+
+#author-style, #date-style {
+  float: right;
+  font-size: 14px;
+}
