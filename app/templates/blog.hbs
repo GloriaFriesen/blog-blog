@@ -7,10 +7,10 @@
     <p>{{model.content}}</p>
   </div>
 </div>
-{{update-blog blog=model update="update" delete="delete"}}
-
+{{update-blog blog=model update="update" delete="delete" id="update-blog"}}
+<hr>
 {{#each model.comments as |comment|}}
-  {{comment-tile comment=comment deleteComment="deleteComment"}}
+  {{comment-tile comment=comment deleteComment="deleteComment" updateComment="updateComment"}}
 {{/each}}
 
 {{new-comment blog=model saveComment="saveComment"}}
