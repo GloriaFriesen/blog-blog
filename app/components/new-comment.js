@@ -1,30 +1,28 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  addNewBlog: false,
+  addComment: false,
   actions: {
-    showBlogForm() {
-      this.set('addNewBlog', true);
+    showCommentForm() {
+      this.set('addComment', true);
     },
-    saveBlog() {
+    saveComment() {
       var params = {
         author: this.get('author'),
         date: this.get('date'),
-        title: this.get('title'),
-        content: this.get('content')
+        content: this.get('content'),
+        blog: this.get('blog')
       };
-      this.set('addNewBlog', false);
+      this.set('addComment', false);
       this.set('author', '');
       this.set('date', '');
-      this.set('title', '');
       this.set('content', '');
-      this.sendAction('saveBlog', params);
+      this.sendAction('saveComment', params);
     },
     cancel() {
-      this.set('addNewBlog', false);
+      this.set('addComment', false);
       this.set('author', '');
       this.set('date', '');
-      this.set('title', '');
       this.set('content', '');
     }
   }

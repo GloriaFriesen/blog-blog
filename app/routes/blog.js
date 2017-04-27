@@ -6,7 +6,12 @@ export default Ember.Route.extend({
   },
   actions: {
     delete(blog) {
-      blog.destroyRecord();
+      var comment_deletions = blog.get('comments').map(function(comment) {
+        return comment.destroyRecord();
+      });
+      Ember.RSVP.all(comment_deletions).then(function() {
+        return blog.destroyRecord();
+      });
       this.transitionTo('index');
     },
     update(blog, params) {
@@ -17,6 +22,19 @@ export default Ember.Route.extend({
       });
       blog.save();
       this.transitionTo('blog', blog.id);
+    },
+    saveComment(params) {
+      var newComment = this.store.createRecord('comment', params);
+      var blog = params.blog;
+      blog.get('comments').addObject(newComment);
+      newComment.save().then(function() {
+        return blog.save();
+      });
+      this.transitionTo('blog', blog);
+    },
+    deleteComment(comment) {
+      comment.destroyRecord();
+      this.transitionTo('blog');
     }
   }
 });

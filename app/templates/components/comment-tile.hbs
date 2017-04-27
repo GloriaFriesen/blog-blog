@@ -1,0 +1,12 @@
+<div class="comments">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      {{comment.author}}
+      {{comment.date}}
+    </div>
+    <div class="panel-body">
+      {{comment.content}}
+      <button {{action 'deleteComment' comment}}>DELETE COMMENT</button>
+    </div>
+  </div>
+</div>

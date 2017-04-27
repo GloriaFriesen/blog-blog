@@ -8,3 +8,9 @@
   </div>
 </div>
 {{update-blog blog=model update="update" delete="delete"}}
+
+{{#each model.comments as |comment|}}
+  {{comment-tile comment=comment deleteComment="deleteComment"}}
+{{/each}}
+
+{{new-comment blog=model saveComment="saveComment"}}

@@ -1,5 +1,4 @@
-{{#if addNewBlog}}
-  <p>FoRm KoRn</p>
+{{#if addComment}}
   <form>
     <div class="form-group">
       <label for="author">Author</label>
@@ -10,17 +9,13 @@
       {{input type="date" value=date id="date"}}
     </div>
     <div class="form-group">
-      <label for="title">Title</label>
-      {{input value=title id="title"}}
-    </div>
-    <div class="form-group">
       <label for="content">Content</label>
       <br>
       {{textarea value=content class="content"}}
     </div>
-    <button {{action 'saveBlog'}}>SAVE THIS BLOG</button>
+    <button {{action 'saveComment'}}>SAVE COMMENT</button>
     <button {{action 'cancel'}}>CANCEL</button>
   </form>
 {{else}}
-  <button {{action 'showBlogForm'}}>BLOG THIS BLOG</button>
+  <button {{action 'showCommentForm'}}>ADD COMMENT</button>
 {{/if}}
