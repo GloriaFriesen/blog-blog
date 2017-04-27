@@ -1,26 +1,26 @@
-<button id="delete-button" {{action 'delete' blog}}>DELETE</button>
+<button id="delete-button" {{action 'delete' blog}} class="btn">DELETE</button>
 {{#if updateBlog}}
 <form>
   <div class="form-group">
     <label for="author">Author</label>
-    {{input value=author id="author" placeholder=blog.author}}
+    {{input value=author id="author" placeholder=blog.author class="author"}}
   </div>
   <div class="form-group">
     <label for="date">Date</label>
-    {{input type="date" value=date id="date" placeholder=blog.date}}
+    {{input type="date" value=date id="date" placeholder=blog.date class="date"}}
   </div>
   <div class="form-group">
     <label for="title">Title</label>
-    {{input value=title id="title" placeholder=blog.title}}
+    {{input value=title id="title" placeholder=blog.title class="title"}}
   </div>
   <div class="form-group">
     <label for="content">Content</label>
     <br>
-    {{textarea value=blog.content id="content"}}
+    {{textarea value=blog.content id="content" class="content"}}
   </div>
-  <button {{action 'update' blog}}>UPDATE THIS BLOG</button>
-  <button {{action 'cancel'}}>CANCEL</button>
+  <button {{action 'update' blog}} class="btn">BLOG</button>
+  <button {{action 'cancel'}} class="btn">CANCEL</button>
 </form>
 {{else}}
-<button {{action 'showUpdateForm'}} id="update-button">UPDATE</button>
+<button {{action 'showUpdateForm'}} class="btn" id="update-button">UPDATE</button>
 {{/if}}

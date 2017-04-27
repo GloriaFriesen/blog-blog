@@ -19,7 +19,7 @@ export default Ember.Component.extend({
       this.set('updateComm', false);
       this.set('author', ''),
       this.set('date', ''),
-      this.set('content', '')
+      this.set('content', '');
     }
   }
 });

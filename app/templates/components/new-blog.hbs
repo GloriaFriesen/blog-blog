@@ -1,26 +1,25 @@
 {{#if addNewBlog}}
-  <p>FoRm KoRn</p>
   <form>
-    <div class="form-group">
+    <div class="form-grape">
       <label for="author">Author</label>
-      {{input value=author id="author"}}
+      {{input value=author id="author" class="author"}}
     </div>
-    <div class="form-group">
+    <div class="form-grape">
       <label for="date">Date</label>
-      {{input type="date" value=date id="date"}}
+      {{input type="date" value=date id="date" class="date"}}
     </div>
-    <div class="form-group">
+    <div class="form-grape">
       <label for="title">Title</label>
-      {{input value=title id="title"}}
+      {{input value=title id="title" class="title"}}
     </div>
-    <div class="form-group">
+    <div class="form-grape">
       <label for="content">Content</label>
       <br>
       {{textarea value=content class="content"}}
     </div>
-    <button {{action 'saveBlog'}}>SAVE THIS BLOG</button>
-    <button {{action 'cancel'}}>CANCEL</button>
+    <button {{action 'saveBlog'}} class="btn">BLOG</button>
+    <button {{action 'cancel'}} class="btn">CANCEL</button>
   </form>
 {{else}}
-  <button {{action 'showBlogForm'}}>BLOG THIS BLOG</button>
+  <button {{action 'showBlogForm'}} class="btn" id="blog-butt">BLOG THIS BLOG</button>
 {{/if}}

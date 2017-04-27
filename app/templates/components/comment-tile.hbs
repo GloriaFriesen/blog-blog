@@ -6,8 +6,8 @@
     </div>
     <div class="panel-body">
       {{comment.content}}
-      <button {{action 'deleteComment' comment}}>DELETE COMMENT</button>
+      <button {{action 'deleteComment' comment}} class="btn auto-butt" id="delete-butt">DELETE COMMENT</button>
+      {{update-comment comment=comment updateComment="updateComment"}}
     </div>
   </div>
-  {{update-comment comment=comment updateComment="updateComment"}}
 </div>
